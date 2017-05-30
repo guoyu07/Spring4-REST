@@ -1,0 +1,25 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> f55bd9100e7f78a2a1f732f8ca3a43ea4d1b38da
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Target directory
+target/
+
+# Eclipse Files
+.settings/
+.project/
+.classpath/
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+mysqldump

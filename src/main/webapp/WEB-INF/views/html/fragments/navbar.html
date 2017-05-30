@@ -1,0 +1,30 @@
+<!--/*--><!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"><!--*/-->
+    <th:block th:fragment="navbar (url,name)" th:assert="${!#strings.isEmpty(url) && !#strings.isEmpty(name)}"><span th:utext="'&lt;!-- the following block was replaced by /frgaments/navbar(\'' +  ${url} + '\',\'' + ${name} + '\') --&gt;'" th:remove="tag"></span>
+    <div class="nav">
+        <ul>
+            <li><a href="home.html" th:href="@{/html/home}" th:attrappend="class=${name eq 'home'}?'active'" th:text="#{page.home}">Home</a></li>
+            <li><a href="../jsp/hello.jsp" th:href="@{/jsp/hello}" th:attrappend="class=${name eq 'hello-jsp'}?'active'" th:text="#{page.hello.jsp}">Hello JSP</a></li>
+            <li><a href="hello.html" th:href="@{/html/hello}" th:attrappend="class=${name eq 'hello-html'}?'active'" th:text="#{page.hello.html}">Hello HTML</a></li>
+            <li><a href="../jsp/contacts.jsp"  th:attrappend="class=${name eq 'contacts-jsp'}?'active'" th:href="@{/jsp/contacts}" th:text="#{page.contacts.jsp}">Contacts JSP</a></li>
+            <li><a href="../jsp/contact.jsp" th:attrappend="class=${name eq 'contact-jsp'}?'active'" th:href="@{/jsp/contact}" th:text="#{page.contact.jsp}">Add Contact (JSP)</a></li>
+            <li><a href="contacts.html" th:attrappend="class=${name eq 'contacts-html'}?'active'" th:href="@{/html/contacts}" th:text="#{page.contacts.html}">Contacts HTML</a></li>
+            <li><a href="contact.html" th:attrappend="class=${name eq 'contact-html'}?'active'" th:href="@{/html/contact}" th:text="#{page.contact.html}">Add Contact (HTML)</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn" th:text="#{page.language}">Language</a>
+                <div class="dropdown-content">
+                    <a href="#" th:href="@{/} + ${url} + '?lang=iw_IL'"><img th:alt="#{lang.iw}" src="../../../resources/images/flags/iw.png" th:src="@{/resources/images/flags/iw.png}">&nbsp;<span th:text="#{lang.iw}">Hebrew</span></a>
+                    <a href="#" th:href="@{/} + ${url} + '?lang=en_US'"><img th:alt="#{lang.en}" src="../../../resources/images/flags/en.png" th:src="@{/resources/images/flags/en.png}">&nbsp;<span th:text="#{lang.en}">English</span></a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn" th:text="#{theme.change}">Theme</a>
+                <div class="dropdown-content">
+                    <a href="#" th:href="@{/} + ${url} + '?theme=spring'"><img th:alt="#{theme.spring}" src="../../../resources/images/spring.png" th:src="@{/resources/images/spring.png}">&nbsp;<span th:text="#{theme.spring}">Spring</span></a>
+                    <a href="#" th:href="@{/} + ${url} + '?theme=wheat'"><img th:alt="#{theme.wheat}" src="../../../resources/images/wheat.png" th:src="@{/resources/images/wheat.png}">&nbsp;<span th:text="#{theme.wheat}">Wheat</span></a>
+                </div>
+            </li>
+            <li><a href="#" th:href="@{'/source/' + ${@fileNameService.getName(url)} + '.html'}" th:text="#{page.source}">Source</a></li>
+        </ul>
+    </div>
+    </th:block>

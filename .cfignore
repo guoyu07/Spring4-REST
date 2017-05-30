@@ -1,0 +1,5 @@
+# ignore the fllowing directories when pushing to CF
+# Eclipse setting directory
+.settings/
+.project
+.classpath

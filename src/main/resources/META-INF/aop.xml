@@ -1,0 +1,9 @@
+<!DOCTYPE aspectj PUBLIC "-//AspectJ//DTD//EN" "http://www.eclipse.org/aspectj/dtd/aspectj.dtd">
+<aspectj>
+	<weaver options="-verbose -showWeaveInfo -debug">
+		<include within="com.tnsilver.spring.data.repository.ContactRepository"/>
+	</weaver>
+	<aspects>
+        <aspect name="com.tnsilver.spring.aspect.AuditorAspect" />
+	</aspects>
+</aspectj>

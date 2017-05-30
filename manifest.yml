@@ -1,0 +1,13 @@
+---
+applications:
+- name: spring-rest
+  env:
+    CF_STARTUP_TIMEOUT: 60
+    CF_STAGING_TIMEOUT: 60
+  buildpack: java_buildpack
+  memory: 4900M
+  host: stage
+  domain: cfapps.io
+  timeout: 180
+  services:
+  - mysql-stage

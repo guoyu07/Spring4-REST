@@ -1,0 +1,3 @@
+DROP TABLE IF EXISTS `audit`;
+DROP TABLE IF EXISTS `contact`;
+DROP TABLE IF EXISTS `schema_version`;
