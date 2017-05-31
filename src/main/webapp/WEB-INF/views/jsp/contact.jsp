@@ -110,7 +110,7 @@
                             </button>
                         </td>
                     </tr>
-                    <tr class="hidden">
+                    <tr class="message">
                         <td class="message" colspan="2"><p data-message="<spring:message code='contact.saved'/>"></p></td>
                     </tr>
                 </table>
